@@ -79,7 +79,7 @@ output "datastore_id" {
   value = length(data.vsphere_datastore.selected_datastore) > 0 ? data.vsphere_datastore.selected_datastore[0].id : null
 }
 
-resource "vsphere_tag_category" "categoryy" {
+resource "vsphere_tag_category" "categori" {
   name             = "Kubernetesu"
   description      = "Category for Kubernetes VMs"
   cardinality      = "MULTIPLE"
@@ -89,13 +89,13 @@ resource "vsphere_tag_category" "categoryy" {
 resource "vsphere_tag" "masterr" {
   name        = "masteru"
   description = "Tag for master VMs"
-  category_id = vsphere_tag_category.categoryy.id
+  category_id = vsphere_tag_category.categori.id
 }
 
 resource "vsphere_tag" "workerr" {
   name        = "workeru"
   description = "Tag for worker VMs"
-  category_id = vsphere_tag_category.categoryy.id
+  category_id = vsphere_tag_category.categori.id
 }
 
 resource "vsphere_virtual_machine" "vms" {
