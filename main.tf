@@ -86,14 +86,14 @@ resource "vsphere_tag_category" "category" {
   associable_types = ["VirtualMachine"]
 }
 
-resource "vsphere_tag" "master" {
-  name        = "master"
+resource "vsphere_tag" "masterr" {
+  name        = "masteru"
   description = "Tag for master VMs"
   category_id = vsphere_tag_category.category.id
 }
 
-resource "vsphere_tag" "worker" {
-  name        = "worker"
+resource "vsphere_tag" "workerr" {
+  name        = "workeru"
   description = "Tag for worker VMs"
   category_id = vsphere_tag_category.category.id
 }
