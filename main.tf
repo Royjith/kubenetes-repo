@@ -89,13 +89,13 @@ resource "vsphere_tag_category" "categoryy" {
 resource "vsphere_tag" "masterr" {
   name        = "masteru"
   description = "Tag for master VMs"
-  category_id = vsphere_tag_category.category.id
+  category_id = vsphere_tag_category.categoryy.id
 }
 
 resource "vsphere_tag" "workerr" {
   name        = "workeru"
   description = "Tag for worker VMs"
-  category_id = vsphere_tag_category.category.id
+  category_id = vsphere_tag_category.categoryy.id
 }
 
 resource "vsphere_virtual_machine" "vms" {
