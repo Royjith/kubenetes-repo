@@ -28,7 +28,7 @@
 
     - name: Download Kubernetes GPG key
       get_url:
-        url: https://pkgs.k8s.io/core:/stable:/latest/deb/Release.key
+        url: https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key
         dest: /tmp/kubernetes-release.key
         mode: '0644'
 
@@ -51,7 +51,7 @@
     - name: Add Kubernetes APT repository to sources list
       lineinfile:
         path: /etc/apt/sources.list.d/kubernetes.list
-        line: 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/latest/deb/ /'
+        line: 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /'
         create: yes
         state: present
         mode: '0644'
