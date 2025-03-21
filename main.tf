@@ -14,7 +14,7 @@ variable "host_datastore_map" {
   type = map(list(string))
   description = "Map of hosts to their accessible datastores"
   default = {
-    "172.28.8.4" = ["Local-4.0"]
+    "172.16.151.5" = ["Kubernetes-POC_Vol01"]
   }
 }
 provider "vsphere" {
