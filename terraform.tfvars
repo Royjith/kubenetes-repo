@@ -6,7 +6,7 @@
 #}
 network     = "VM Network"
 template    = "test1"
-vm_username = "pikube"
+vm_username = "administrator@vsphere.local"
 vm_password = "Welcome@123"
 vsphere_server = "172.16.165.10"
 vsphere_datacenter = "K8's-POC" #"T-Hub"
