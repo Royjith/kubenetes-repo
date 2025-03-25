@@ -110,7 +110,7 @@ resource "vsphere_virtual_machine" "vms" {
 
   disk {
     label            = "disk0"
-    size             = "50"
+    size             = "100"
     thin_provisioned = true
   }
 
