@@ -14,7 +14,7 @@ variable "host_datastore_map" {
   type = map(list(string))
   description = "Map of hosts to their accessible datastores"
   default = {
-    "172.16.151.5" = ["Kubernetes-POC_Vol01"]
+    "172.28.8.3" = ["Local-3.0"]
   }
 }
 provider "vsphere" {
@@ -110,7 +110,7 @@ resource "vsphere_virtual_machine" "vms" {
 
   disk {
     label            = "disk0"
-    size             = "100"
+    size             = "50"
     thin_provisioned = true
   }
 
