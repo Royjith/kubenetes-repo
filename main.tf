@@ -116,7 +116,7 @@ resource "vsphere_virtual_machine" "vms" {
 
   connection {
     type     = "ssh"
-    user     = "pikube"
+    user     = "test"
     password = "Welcome@123"
     host     = self.default_ip_address
   }
