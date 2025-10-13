@@ -78,14 +78,14 @@ output "datastore_id" {
 }
 
 resource "vsphere_tag_category" "category" {
-  name             = "Kubernetes8"
+  name             = "Kubernetes9"
   description      = "Category for Kubernetes VMs"
   cardinality      = "MULTIPLE"
   associable_types = ["VirtualMachine"]
 }
 
 resource "vsphere_tag" "master" {
-  name        = "master8"
+  name        = "master9"
   description = "Tag for master VMs"
   category_id = vsphere_tag_category.category.id
 }
