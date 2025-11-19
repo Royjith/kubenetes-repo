@@ -5,7 +5,7 @@
 #  kube-worker2 = "worker2-1"
 #}
 network     = "VM Network"
-template    = "Ubuntu-Golden-temp-22.04"
+template    = "ubuntu-golden"
 vm_username = "satyajith"
 vm_password = "Welcome@123"
 vsphere_server = "172.28.8.5"
